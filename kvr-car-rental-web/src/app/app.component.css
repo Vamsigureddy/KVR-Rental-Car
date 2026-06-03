@@ -1,0 +1,157 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* NAVBAR */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 30px;
+  height: 80px;
+
+  /* background: linear-gradient(
+    90deg,
+    #b9f6ca,
+    #69f0ae,
+    #b2ff59
+  ); */
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* LOGO */
+
+.logo {
+  font-size: 40px;
+  font-weight: bold;
+
+  background: linear-gradient(
+    90deg,
+    #ff1744,
+    #ff9100,
+    #2979ff,
+    #00c853
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  cursor: pointer;
+
+  animation:
+    slideLoop 8s linear infinite,
+    glowText 2s ease-in-out infinite alternate;
+
+  transition: 0.3s;
+}
+
+/* LOGO HOVER */
+
+.logo:hover {
+  transform: scale(1.08);
+}
+
+/* MENU */
+
+.menu a {
+  color: #1b5e20 !important;
+
+  margin-left: 20px;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: #ff1744 !important;
+  transform: translateY(-2px);
+}
+
+/* SLIDE ANIMATION */
+
+@keyframes slideLoop {
+
+  0% {
+    transform: translateX(-150px);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(150px);
+    opacity: 0;
+  }
+}
+
+/* GLOW EFFECT */
+
+@keyframes glowText {
+
+  from {
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.5));
+  }
+
+  to {
+    filter:
+      drop-shadow(0 0 10px #fff)
+      drop-shadow(0 0 20px #69f0ae);
+  }
+}
+
+.menu a {
+  color: #1b5e20 !important;
+
+  margin-left: 20px;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  padding: 8px 18px;
+
+  border-radius: 8px;
+
+  transition: 0.3s;
+}
+
+/* Hover Effect */
+
+.menu a:hover {
+  background: rgba(255,255,255,0.4);
+  color: #ff1744 !important;
+}
+
+/* Active Page Highlight */
+
+.active-link {
+  background: white;
+  color: #1976d2 !important;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+  font-weight: bold;
+}
